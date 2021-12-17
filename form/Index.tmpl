@@ -1,0 +1,24 @@
+{{ define "Index" }}
+{{ template "Header" }}
+{{ template "Menu" }}
+<h2>Data Vendor</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <td>vendor id</td>
+            <td>name</td>
+            <td>activated</td>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range .}}
+        <tr>
+            <td>{{ .VendorCategoryId }}</td>
+            <td>{{ .Name }}</td>
+            <td>{{ .Activated }}</td>
+        </tr>
+        {{ end }}
+    </tbody>
+</table>
+{{ template "Footer"}}
+{{ end }}
